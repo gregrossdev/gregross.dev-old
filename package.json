@@ -16,5 +16,8 @@
     "nuxt": "^3.6.5",
     "tsparticles-slim": "^2.11.1",
     "vue3-particles": "^2.11.1"
+  },
+  "dependencies": {
+    "vue-particles": "^1.0.9"
   }
 }
