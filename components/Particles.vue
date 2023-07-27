@@ -70,6 +70,7 @@ const particlesLoaded = async container => {
       id="tsparticles"
       :options="options"
       :particlesInit="particlesInit"
+      :particlesLoaded="particlesLoaded"
   />
 </template>
 
