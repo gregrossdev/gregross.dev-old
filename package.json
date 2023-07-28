@@ -18,6 +18,7 @@
     "vue3-particles": "^2.11.1"
   },
   "dependencies": {
+    "tsparticles": "^2.11.1",
     "vue-particles": "^1.0.9"
   }
 }

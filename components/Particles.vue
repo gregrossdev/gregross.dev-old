@@ -1,8 +1,6 @@
 <script lang="ts" setup>
-import type { Engine } from "tsparticles-engine";
-import { loadSlim } from "tsparticles-slim";
-import { ParticlesComponent } from "vue3-particles"; // loads tsparticles-slim
-//import { loadFull } from "tsparticles"; // loads tsparticles
+// import { loadSlim } from "tsparticles-slim";
+import { loadFull } from "tsparticles";
 const options = {
       background: {
         color: "#000", // this sets a background color for the canvas
@@ -51,26 +49,27 @@ const options = {
         },
       },
     }
-declare module "particles.vue3";
+
 const particlesInit = async engine => {
-  //await loadFull(engine);
-  await loadSlim(engine);
+  await loadFull(engine);
+  // await loadSlim(engine);
 };
 
-const particlesLoaded = async container => {
-  console.log("Particles container loaded", container);
-};
 
 </script>
 
 <template>
   <!-- tsParticles Repository: https://github.com/matteobruni/tsparticles -->
   <!-- tsParticles Website: https://particles.js.org -->
-  <ParticlesComponent
+<!--  <ParticlesComponent-->
+<!--      id="tsparticles"-->
+<!--      :options="options"-->
+<!--      :particlesInit="particlesInit"-->
+<!--  />-->
+  <vue-particles
       id="tsparticles"
       :options="options"
-      :particlesInit="particlesInit"
-      :particlesLoaded="particlesLoaded"
+      :particles-init="particlesInit"
   />
 </template>
 
